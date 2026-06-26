@@ -1,0 +1,168 @@
+{
+  "users": {
+    "user_venkat": {
+      "id": "user_venkat",
+      "name": "Venkat A.",
+      "email": "venkatamaheshbabuaddanki@gmail.com",
+      "avatar": "👨‍💻",
+      "upiId": "6281083636@ptsbi",
+      "bankName": "Airttel Payments Bank",
+      "bankAccountNo": "6281083636",
+      "bankIfsc": "AiRP0000001"
+    },
+    "user_sarah": {
+      "id": "user_sarah",
+      "name": "Sarah Jenkins",
+      "email": "sarah@example.com",
+      "avatar": "👩‍💼",
+      "upiId": "sarah@okaxis",
+      "bankName": "HDFC Bank",
+      "bankAccountNo": "5010041235678",
+      "bankIfsc": "HDFC0000060"
+    },
+    "user_rohit": {
+      "id": "user_rohit",
+      "name": "Rohit Sharma",
+      "email": "rohit@example.com",
+      "avatar": "🧔",
+      "upiId": "rohit@paytm",
+      "bankName": "ICICI Bank",
+      "bankAccountNo": "000401567894",
+      "bankIfsc": "ICIC0000004"
+    },
+    "user_emily": {
+      "id": "user_emily",
+      "name": "Emily Watson",
+      "email": "emily@example.com",
+      "avatar": "👩",
+      "upiId": "emily@okicici",
+      "bankName": "Axis Bank",
+      "bankAccountNo": "914010023456789",
+      "bankIfsc": "UTIB0000010"
+    },
+    "user_1782196922005": {
+      "id": "user_1782196922005",
+      "name": "Maheshaddanki456",
+      "email": "maheshaddanki456@gmail.com",
+      "avatar": "👤",
+      "upiId": "6281083636@ptsbi",
+      "bankName": "Airtel payments bank",
+      "bankAccountNo": "6281083636",
+      "bankIfsc": "AIRP0000001"
+    },
+    "user_1782199208126": {
+      "id": "user_1782199208126",
+      "name": "Mahi4500",
+      "email": "mahi4500@gmail.com",
+      "avatar": "👤",
+      "upiId": "mahi4500@upi",
+      "bankName": "HDFC Bank (Sandbox Active)",
+      "bankAccountNo": "5010038515056",
+      "bankIfsc": "HDFC0000210"
+    },
+    "user_1782199228986": {
+      "id": "user_1782199228986",
+      "name": "24eg505r02",
+      "email": "24eg505r02@anurag.edu.in",
+      "avatar": "👤",
+      "upiId": "24eg505r02@upi",
+      "bankName": "HDFC Bank (Sandbox Active)",
+      "bankAccountNo": "5010055660811",
+      "bankIfsc": "HDFC0000210"
+    },
+    "user_1782199346181": {
+      "id": "user_1782199346181",
+      "name": "navadeep",
+      "email": "navadeepmurmurwar@gamil.com",
+      "avatar": "👤",
+      "upiId": "9398173043@slc"
+    },
+    "user_1782199388463": {
+      "id": "user_1782199388463",
+      "name": "sai",
+      "email": "saisrishanthoddula@gmail.com",
+      "avatar": "👤",
+      "upiId": "maheshaddanki456@axl"
+    }
+  },
+  "groups": {
+    "group_1782197051621": {
+      "id": "group_1782197051621",
+      "name": "sss",
+      "description": "",
+      "members": [
+        "user_venkat",
+        "user_1782196922005"
+      ],
+      "createdAt": "2026-06-23T06:44:11.621Z"
+    },
+    "group_1782199313220": {
+      "id": "group_1782199313220",
+      "name": "Trip to Goa",
+      "description": "",
+      "members": [
+        "user_1782196922005",
+        "user_1782199346181",
+        "user_1782199388463"
+      ],
+      "createdAt": "2026-06-23T07:21:53.220Z"
+    }
+  },
+  "expenses": {
+    "exp_1782199419700": {
+      "id": "exp_1782199419700",
+      "groupId": "group_1782199313220",
+      "description": "trip expenses",
+      "amount": 20,
+      "date": "2026-06-23",
+      "category": "Food",
+      "paidBy": "user_1782196922005",
+      "splitStrategy": "equal",
+      "splits": {
+        "user_1782196922005": 0,
+        "user_1782199346181": 10,
+        "user_1782199388463": 10
+      }
+    },
+    "settle_1782199456441": {
+      "id": "settle_1782199456441",
+      "groupId": "group_1782199313220",
+      "description": "Settlement: navadeep paid Maheshaddanki456 via BHIM UPI",
+      "amount": 10,
+      "date": "2026-06-23",
+      "category": "Settlement",
+      "paidBy": "user_1782199346181",
+      "splitStrategy": "unequal",
+      "splits": {
+        "user_1782196922005": 10
+      }
+    },
+    "settle_1782199484527": {
+      "id": "settle_1782199484527",
+      "groupId": "group_1782199313220",
+      "description": "Settlement: sai paid Maheshaddanki456 via BHIM UPI",
+      "amount": 10,
+      "date": "2026-06-23",
+      "category": "Settlement",
+      "paidBy": "user_1782199388463",
+      "splitStrategy": "unequal",
+      "splits": {
+        "user_1782196922005": 10
+      }
+    }
+  },
+  "payments": {
+    "pay_pending_6b79757a7a8808a9": {
+      "id": "pay_pending_6b79757a7a8808a9",
+      "user_id": "user_1782196922005",
+      "transaction_id": "",
+      "gateway_payment_id": "",
+      "amount": 199,
+      "currency": "INR",
+      "status": "pending",
+      "payment_method": "",
+      "created_at": "2026-06-23T07:25:02.066Z",
+      "updated_at": "2026-06-23T07:25:02.066Z"
+    }
+  }
+}

@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  /* Modern High-Contrast Cosmic Dark Theme colors */
+  --color-neon-purple: #a855f7; /* Electric Purple */
+  --color-neon-pink: #ec4899;   /* Vibrant Rose Pink */
+  --color-neon-teal: #10b981;   /* Emerald Green Success */
+  --color-neon-blue: #0ea5e9;   /* Sky Blue */
+  --color-dark-void: #090312;   /* Absolute Charcoal Deep Obsidian */
+  --color-deep-indigo: #120726; /* Deepest Cosmic Violet Card Base */
+  --color-glass-card: rgba(18, 7, 38, 0.7);
+}
+
+/* Base Dark Theme Set-up */
+body {
+  background-color: #090312 !important;
+  color: #f8fafc !important; /* Highly readable near-white */
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ensure background of app containers adapt elegantly */
+.bg-dark-void, 
+.min-h-screen,
+.min-h-screen.bg-dark-void,
+.bg-\[\#090312\],
+.bg-dark-void\/70,
+#app {
+  background-color: #090312 !important;
+  background-image: radial-gradient(circle at 50% 0%, rgba(168, 85, 247, 0.15) 0%, transparent 60%), 
+                    radial-gradient(circle at 100% 100%, rgba(236, 72, 153, 0.08) 0%, transparent 50%) !important;
+}
+
+/* Card Bases: Deep Glassy Charcoal Purple, premium feel with rich contrasts */
+.bg-deep-indigo,
+.bg-glass-card,
+aside,
+.bg-white,
+.bg-\[\#110724\]\/60,
+.bg-\[\#120726\]\/40,
+.bg-\[\#100721\]\/70,
+.bg-white\/5,
+.bg-white\/10,
+div[class*="backdrop-blur"],
+div[class*="shadow-sm"] {
+  background-color: #120726 !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Active elements / Hover states on Cards */
+.hover\:border-neon-purple\/40:hover {
+  border-color: rgba(168, 85, 247, 0.5) !important;
+  box-shadow: 0 10px 30px -10px rgba(168, 85, 247, 0.25) !important;
+}
+
+/* Ensure Sidebars look sleek, dark, and elegant */
+aside {
+  background-color: #0d071c !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+/* ---------------- PREMIUM LEGIBILITY OVERRIDES ---------------- */
+
+/* Primary Headers & High Intensity Text */
+h1, h2, h3, h4, h5, h6,
+.text-slate-800,
+.text-slate-850,
+.text-slate-900,
+.text-gray-800,
+.text-gray-901,
+.text-gray-900 {
+  color: #ffffff !important; /* Premium Pure White */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* High Contrast Accent Hover Modifiers */
+.group\/row:hover .group-hover\/row\:text-neon-purple {
+  color: #c084fc !important; /* Soft Purple Glow */
+}
+
+/* Secondary Texts & Labels: Mapped to vibrant slate/silver-white */
+.text-gray-500,
+.text-slate-500,
+.text-slate-600,
+.text-gray-600,
+.text-slate-700,
+.text-slate-705,
+.text-gray-700,
+.text-slate-400,
+.text-gray-400 {
+  color: #cbd5e1 !important; /* Elegant Readable Silver-Gray */
+}
+
+/* Tertiary metadata values and soft helpers */
+.text-slate-500.text-\[10px\],
+.text-slate-500.font-medium,
+.text-gray-500.font-mono,
+.text-slate-500.font-bold {
+  color: #94a3b8 !important; /* Intermediate Silver */
+}
+
+/* Body copies, listings, subtexts, and chat bubbles */
+p, li, .text-xs, .text-sm {
+  color: #f1f5f9 !important; /* Ultra comfortable near-white */
+}
+
+/* Highlighted currency, numbers, and stats values */
+.font-mono.text-slate-800,
+.font-mono.text-slate-650,
+.font-mono.text-slate-900,
+span.text-xs.font-black,
+span.text-2xl.font-black {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+/* Special positive financial status values (You get back / Credit) */
+span.text-neon-teal,
+.text-neon-teal {
+  color: #34d399 !important; /* Super-vibrant Emerald */
+  text-shadow: 0 0 8px rgba(52, 211, 153, 0.25);
+}
+
+/* Special negative financial values / debts (You owe / Debit) */
+span.text-neon-pink,
+.text-neon-pink {
+  color: #f43f5e !important; /* Super-vibrant Rose-Pink */
+  text-shadow: 0 0 8px rgba(244, 63, 94, 0.25);
+}
+
+/* Glowing text helpers */
+.text-glow-purple {
+  text-shadow: 0 0 12px rgba(168, 85, 247, 0.5);
+}
+
+/* UPI Addressing & dynamic variables highlighting */
+p.text-xs.text-slate-500,
+.text-slate-500.mt-0\.5,
+.font-mono.text-[10px] {
+  color: #38bdf8 !important; /* High contrast energetic sky blue */
+}
+
+/* Inputs, Textareas, Select fields: HighTech Cosmic Dark containers */
+input, textarea, select {
+  background-color: #1a0f35 !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #64748b !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #c084fc !important;
+  box-shadow: 0 0 0 3px rgba(192, 132, 252, 0.3) !important;
+  outline: none !important;
+}
+
+/* Browser standard option tag styling overrides */
+select option {
+  background-color: #120726 !important;
+  color: #ffffff !important;
+}
+
+/* Ensure modal drawers and internal blocks have beautiful nested styling */
+div[class*="relative bg-white"],
+div[class*="bg-slate-50"],
+.bg-slate-50,
+.bg-slate-100 {
+  background-color: #160d2b !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Custom interactive hover highlights inside listings */
+.hover\:bg-slate-100:hover,
+.hover\:bg-slate-50:hover,
+.hover\:bg-white\/5:hover,
+div[class*="hover:bg-slate-100"]:hover,
+div[class*="hover:bg-slate-50"]:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(168, 85, 247, 0.2) !important;
+}
+
+/* Interactive elements / clickable checkboxes */
+button[class*="border-slate-300"] {
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  background-color: #1a0f35 !important;
+}
+
+/* Active primary buttons with purple-pink linear gradient */
+button.bg-gradient-to-r,
+button.bg-gradient-to-tr,
+button[type="submit"].bg-gradient-to-r,
+#add-expense-trigger,
+#submit-expense-btn,
+.bg-gradient-to-r.from-neon-purple.to-neon-pink {
+  background-image: linear-gradient(135deg, #a855f7 0%, #ec4899 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 18px rgba(168, 85, 247, 0.4) !important;
+}
+
+button.bg-gradient-to-r:hover,
+button.bg-gradient-to-tr:hover {
+  opacity: 0.95 !important;
+  box-shadow: 0 4px 22px rgba(168, 85, 247, 0.55) !important;
+}
+
+/* Active navigation indicators */
+nav button[class*="bg-gradient-to-r"],
+nav button.text-white {
+  background-image: linear-gradient(135deg, #a855f7 0%, #ec4899 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(168, 85, 247, 0.25) !important;
+}
+
+nav button:not(.text-white):hover {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  color: #ffffff !important;
+}
+
+/* Logo titles clip-text properties */
+span.bg-clip-text {
+  color: transparent !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+}
+
+.bg-clip-text.text-transparent {
+  background-image: linear-gradient(135deg, #a855f7 0%, #ec4899 100%) !important;
+}
+
+/* Category Splitting Badges colors */
+.bg-amber-500\/10 { background-color: rgba(245, 158, 11, 0.15) !important; color: #fbbf24 !important; border-color: rgba(245, 158, 11, 0.3) !important; }
+.bg-indigo-500\/10 { background-color: rgba(99, 102, 241, 0.15) !important; color: #a5b4fc !important; border-color: rgba(99, 102, 241, 0.3) !important; }
+.bg-teal-500\/10 { background-color: rgba(20, 184, 166, 0.15) !important; color: #2dd4bf !important; border-color: rgba(20, 184, 166, 0.3) !important; }
+.bg-sky-500\/10 { background-color: rgba(14, 165, 233, 0.15) !important; color: #38bdf8 !important; border-color: rgba(14, 165, 233, 0.3) !important; }
+.bg-pink-500\/10 { background-color: rgba(236, 72, 153, 0.15) !important; color: #f472b6 !important; border-color: rgba(236, 72, 153, 0.3) !important; }
+.bg-emerald-500\/10 { background-color: rgba(16, 185, 129, 0.15) !important; color: #34d399 !important; border-color: rgba(16, 185, 129, 0.3) !important; }
+.bg-rose-500\/10 { background-color: rgba(244, 63, 94, 0.15) !important; color: #f43f5e !important; border-color: rgba(244, 63, 94, 0.3) !important; }
+
+/* Modal Backdrop glass layers */
+.fixed.inset-0.bg-slate-900\/40,
+.fixed.inset-0.bg-black\/60,
+.fixed.inset-0.bg-dark-void\/80 {
+  background-color: rgba(6, 2, 14, 0.7) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+/* Beautiful custom cosmic scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090312;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.45);
+}

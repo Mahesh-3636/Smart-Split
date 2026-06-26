@@ -1,0 +1,6 @@
+{
+  "name": "Smart Splitter",
+  "description": "Smart Expense Management & Bill Splitting System with transaction optimization, UPI reminder generation, spend analytics, and a server-side Gemini AI budgeting assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
